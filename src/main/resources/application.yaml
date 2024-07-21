@@ -1,0 +1,22 @@
+spring:
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/springjwt_db
+        username: postgres
+        password: 79182872449
+
+    jpa:
+        hibernate:
+            ddl-auto: create
+            show_sql: true
+        properties:
+            hibernate:
+                format_sql: true
+        database: postgresql
+
+application:
+    security:
+        jwt:
+            secret-key: 0b3ba6d3946afd6ad74ad034ee50a51af50e921cd3bb10fe5b7b9f9e99331de8
+            acces-token-expiration: 86400000
+            refresh-token-expiration: 604800000
